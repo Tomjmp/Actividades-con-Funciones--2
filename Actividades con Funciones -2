@@ -1,0 +1,88 @@
+#FUNCION SALUDO #1
+def saludo():
+    print("Hola")
+saludo()
+
+#FUNCION SUMA #2
+def suma(a,b):
+    return a+ b
+result = suma(8,7)
+print(result)
+
+#FUNCION AREA DE RECTANGULO #3
+def area(longitud,ancho):
+    return longitud*ancho
+resultado = area(3,6)
+print("El area del rectangulo es igual a:", resultado)
+
+#FUNCION NUMERO PAR E IMPAR #4
+def imparopar(numero):
+    if numero % 2 == 0:
+        return "par"
+    else:
+        return "impar"
+resultado = imparopar(6)
+print("El numero es:", resultado)
+
+#FUNCION DE CELCIUS A FAHRENHEIT #5
+def conversion(celcius):
+    return (celcius*9/5)+32
+resultado = conversion(3)
+print("El resultado a Fahrenheit es igual a:",resultado)
+
+#MAXIMO TRES NUMEROS #6
+def maxx(num1, num2, num3):
+    return max(num1, num2, num3)
+num1 = int(input("Ingrese el primer numero:"))
+num2 = int(input("Ingrese el segundo numero"))
+num3 = int(input("Ingrese el tercer numero"))
+resultado = max(num1, num2, num3)
+print("El numero mayor es", resultado)
+
+#PALINDROMO #7
+def palindromo(palabra):  
+ for i in range(0,int(len(palabra)/2)): 
+  if palabra[i]!=palabra[-i-1]:
+   return False
+ return True
+palabra=input('Escriba una palabra: ').lower()  
+print(palabra, '¿es un palindromo?',palindromo(palabra))  
+
+#FACTORIAL #8
+def factorial(n):
+    if n == 0 or n == 1:
+       return 1
+    return n*factorial(n-1)
+resultado = factorial(5)
+print("El factorial es igual a:", resultado)
+
+#CONTAR VOCALES #9
+def contar_vocales(frase):
+   vocales = ("aeiouAEIOU")
+   contador = sum(1 for letra in frase if letra in vocales)
+   return contador
+resultado = contar_vocales("Hola")
+print("Las vocales en la frase son", resultado)
+
+#NUMEROS PRIMOS #10
+def es_primo(num):
+    if num < 2:
+        return False
+    for i in range(2, int(num**0.5) + 1):
+        if num % i == 0:
+            return False
+    return True
+numero = int(input("Ingresa un número para verificar si es primo: "))
+if es_primo(numero):
+    print("Sí, el número es primo.")
+else:
+    print("No, el número no es primo.")
+
+
+   
+
+
+
+
+
+
